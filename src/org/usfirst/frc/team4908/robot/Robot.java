@@ -255,8 +255,8 @@ public class Robot extends IterativeRobot
     	while(!isInDeadZone() && false)
     	{
     	
-    	speedLeft  = leftEncoder.getRate()  / THEO_MAX; // will give a number from [-1, 1]
-    		speedRight = rightEncoder.getRate() / THEO_MAX;
+    	speedLeft  = leftEncoder.getRate()  / maxLeft; // will give a number from [-1, 1]
+    		speedRight = rightEncoder.getRate() / maxRight;
     		
     	
     		drive.tankDrive(-stick1.getRawAxis(1), -stick1.getRawAxis(1), false);
